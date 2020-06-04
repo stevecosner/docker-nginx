@@ -4,6 +4,6 @@ services:
   web1:
     image: nginx
     volumes:
-      - ./startbootstrap-landing:/usr/share/nginx/html
+      - ./startbootstrap-landing-page:/usr/share/nginx/html
     ports:
       - "80:80"
