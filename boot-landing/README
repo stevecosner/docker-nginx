@@ -1,0 +1,9 @@
+#README
+
+To run docker compose volume:
+
+Clone https://github.com/BlackrockDigital/startbootstrap-landing-page.git to working directory.
+
+Change the docker-compose.yml file to another name.
+
+Change the name of the file from docker-compose-volume.yml to docker-compose.yml.
