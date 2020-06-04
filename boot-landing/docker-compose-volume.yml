@@ -1,9 +1,9 @@
 ---
 version: "2"
-
-web:
-  image: nginx
-  volumes:
-   - ./startbootstrap-landing:/usr/share/nginx/html
-  ports:
-   - "80:80"
+services:
+  web1:
+    image: nginx
+    volumes:
+      - ./startbootstrap-landing:/usr/share/nginx/html
+    ports:
+      - "80:80"
