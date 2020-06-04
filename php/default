@@ -1,0 +1,21 @@
+server {
+        listen 80;
+        root /usr/share/nginx/html;
+        index index.php index.html index.htm index.nginx-debian.html;
+#        server_name example.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+
+        location ~ \.php$ {
+                include /etc/nginx/fastcgi_params;
+                fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+                fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
+        }
+
+        location ~ /\.ht {
+                deny all;
+        }
+}
+
