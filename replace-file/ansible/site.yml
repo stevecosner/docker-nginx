@@ -1,0 +1,12 @@
+---
+
+- name: Pull docker image and create container
+
+  hosts: localhost
+  connection: local
+#  become: yes
+#  remote_user: steve
+  
+  roles:
+    - common
+
