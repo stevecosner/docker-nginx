@@ -1,0 +1,43 @@
+---
+
+
+- name: Build image and with build args
+
+  docker_image:
+
+    name: nginx-2-header
+
+    build:
+
+      path: .
+
+      args:
+
+#       log_volume: /var/log/myapp
+
+        listen_port: 80
+
+    source: build
+
+
+
+- name: start container
+
+  docker_container:
+
+    name: n1
+
+    image: nginx-2-header
+
+#    networks:
+
+#      - name: bridge
+
+#        ipv4_address: "172.17.0.100"
+
+    ports:
+
+     - "82:80"
+    state: started
+    detach: yes
+    interactive: yes
