@@ -9,6 +9,5 @@ RUN apt install git -y
 RUN git clone https://github.com/BlackrockDigital/startbootstrap-landing-page.git
 RUN cp -r startbootstrap-landing-page/. /usr/share/nginx/html
 RUN cp -r /usr/share/nginx/html/dist/css /usr/share/nginx/html
-RUN cp -r /usr/share/nginx/html/dist/css /usr/share/nginx/html
 RUN cp -r /usr/share/nginx/html/dist/index.html /usr/share/nginx/html
 RUN cp -r /usr/share/nginx/html/dist/assets /usr/share/nginx/html
